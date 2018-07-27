@@ -1,0 +1,186 @@
+@import "bower_components/circular-std";
+/*-----Global-----*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    font-family:'Poppins', sans-serif;
+    font-weight: 100;
+}
+
+body {
+    width: 60%;
+    margin: auto;
+    background-image: url("images/background.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #424242;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #757575;
+}
+
+h5 {
+    font-family:"Poppins", sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #424242;
+}
+
+p {
+    color: #757575;
+    font-weight: 100;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/*----Nac-----*/
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+.name {
+    flex: 1;
+    margin-top: 5px;
+}
+.navItems {
+    text-align: right;
+}
+.navItems a, .name a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #424242;
+}
+.navItems a {
+    margin-left: 40px;
+    text-decoration: none;
+}
+.name a {
+    text-decoration: none;
+}
+
+/*-----Landing-----*/
+.landing {
+    height: 75vh;
+    position: relative;
+}
+.landingWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.landingL {
+    margin-top: 4em;
+}
+.scroll {
+    position: absolute;
+    bottom: 180px;
+    left: 0;
+    right: 0;
+
+}
+/*-----Work 01-----*/
+.work {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20em;
+}
+.work > .workText {
+    position: absolute;
+    top: 85px;
+}
+.work > .workText >.underline {
+    display: block;
+    background-color: #027bff;
+    height: 3px;
+    width: 72px;
+    margin-top: 5px;
+}
+.work > .workImg {
+    width: 91%;
+    float: right;
+    -webkit-box-shadow: 0px 3px 20px 0px #9E9E9E;
+    -moz-box-shadow: 0px 3px 20px 0px #9E9E9E;
+    box-shadow: 0px 3px 20px 0px #9E9E9E;
+}
+.work ul {
+    position: absolute;
+    bottom: 0;
+    right: 86%;
+}
+.work ul li {
+    margin-top: 20px;
+}
+
+/*-----Work 02-----*/
+.work2 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20em;
+}
+.work2 > .workText {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    text-align: right;
+}
+.work2 > .workText >.underline {
+    display: block;
+    background-color: #027bff;
+    height: 3px;
+    width: 72px;
+    margin-top: 5px;
+    float: right;
+}
+.work2 > .workImg {
+    width: 91%;
+    float: left;
+    -webkit-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+    -moz-box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+    box-shadow: 0px 3px 70px 0px rgba(23,30,36,0.06);
+}
+.work2 ul {
+    position: absolute;
+    bottom: 0;
+    left: 86%;
+}
+.work2 ul li {
+    margin-top: 20px;
+}
+
+/*-----all works----*/
+.work a, .work2 a {
+    text-decoration: none;
+}
+
+/*-----footer---*/
+.footer {
+    padding-bottom: 7em;
+    text-align: center;
+}
+.footerIcons a{
+    margin: 15px;
+}
