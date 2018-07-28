@@ -55,7 +55,17 @@ p {
     font-size: 20px;
 }
 
-/*----Nac-----*/
+.pink {
+    color: #F48FB1;
+}
+.blue {
+    color: #039BE5;
+}
+.green {
+    color: #AED581;
+}
+
+/*----Nav-----*/
 .nav {
     display: flex;
     align-items: center;
@@ -238,16 +248,10 @@ p {
     margin-right: 15%;
     margin-top: 30px;
 }
-.pink {
-    color: #F48FB1;
-}
-.blue {
-    color: #90CAF9;
-}
 .mailto {
     text-decoration: none;
     color: #757575;
 }
 .mailto:hover {
-    color: #027bff;
+    color: #039BE5;
 }

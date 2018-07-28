@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+    <!------------twemojis----------------->
     <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
     <link rel="stylesheet" href="https://rawgit.com/ellekasai/twemoji-awesome/gh-pages/twemoji-awesome.css">
+    <!------------icon------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!------------animate.css------------------>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>Portfolio</title>
 </head>
 <body>
 <!------------------navBar--------------------->
-<div class="nav">
-    <div class="name">
-        <a href="index.html"><img src="images/logo.png" height="80"></a>
-    </div>
-    <div class="navItems" id="myTopnav">
-        <a href="index.html"><p>work</p></a>
-        <a href="about.html"><p>about</p></a>
-        <a href="https://drive.google.com/open?id=1HrWxY4Yx8u05lFEJUk0aCcyxPXSEKkt0" target="_blank"><p>resume</p></a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-2x fa-bars"></i>
-        </a>
+<div class="animated fadeInDown">
+    <div class="nav">
+        <div class="name">
+            <a href="index.html"><img src="images/logo.png" height="80"></a>
+        </div>
+        <div class="navItems" id="myTopnav">
+            <a href="index.html"><p class="haha">work</p></a>
+            <a href="about.html"><p>about</p></a>
+            <a href="https://drive.google.com/open?id=1HrWxY4Yx8u05lFEJUk0aCcyxPXSEKkt0" target="_blank"><p>resume</p></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-2x fa-bars"></i>
+            </a>
+        </div>
     </div>
 </div>
+<!--------------landingPage-------------->
 <div class="landing">
     <div class="landingWrapper">
         <div class="landingL">
-            <h1>Hello, I am Yutong.	<i class="twa twa-lg twa-hatching-chick"></i></h1>
-            <p>UX Designer & <span class="blue">Product Designer</span> based in San Diego.<br>Curr = VR/AR Researcher @UC Berkeley;</p>
+            <h1 class="animated fadeInUp">Hello, I am Yutong.<i class="twa twa-lg twa-hatching-chick"></i></h1>
+            <p class="animated fadeInUp">UX Designer & <span class="blue">Product Designer</span> based in San Diego.<br>Curr = VR/AR Researcher @UC Berkeley;</p>
         </div>
         <div class="landingR">
             <!--Picture if needed-->
@@ -38,15 +45,16 @@
     </div>
 </div>
 <!--------------projects----------------->
-<div class="work clearfix">
-    <div class="workText">
-        <h1>Flossy<i class="twa twa-lg twa-doughnut" style="border-bottom:0px;"></i></h1>
-        <a href="#"><h5>View Project</h5></a>
-        <div class="underline"></div>
+<div class="animated fadeInUp">
+    <div class="work clearfix">
+        <div class="workText">
+            <h1>Flossy<i class="twa twa-lg twa-doughnut" style="border-bottom:0px;"></i></h1>
+            <a href="#"><h5>View Project</h5></a>
+            <div class="underline"></div>
+        </div>
+        <img src="images/flossy.png" alt="project image" class="workImg">
     </div>
-    <img src="images/flossy.png" alt="project image" class="workImg">
 </div>
-
 <div class="work2 clearfix">
     <div class="workText">
         <h1>Focus<i class="twa twa-lg twa-leaves"></i></h1>
