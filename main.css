@@ -98,14 +98,14 @@ p {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 769px) {
     .navItems a {display: none;}
     .navItems a.icon {
         display: block;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .navItems.responsive {position: relative;}
     .navItems.responsive .navItems .icon {
         right: 0;
@@ -244,9 +244,10 @@ p {
 .blue {
     color: #90CAF9;
 }
-.introText2 {
-    text-align: left;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 30px;
+.mailto {
+    text-decoration: none;
+    color: #757575;
+}
+.mailto:hover {
+    color: #027bff;
 }
