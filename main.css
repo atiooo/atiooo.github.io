@@ -107,7 +107,7 @@ p {
         display: none;
     }
     .landingL {
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -223,6 +223,34 @@ p {
     margin-top: 20px;
 }
 
+@media screen and (max-width: 768px){
+    .work > .workImg {
+            width: 100%;
+        }
+    .work > .workText {
+        position: relative;
+        top: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .work > .workText > .underline {
+        margin-left: 40%;
+    }
+
+    .work2 > .workImg {
+        width: 100%;
+    }
+    .work2 > .workText {
+        position: relative;
+        top: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .work2 > .workText > .underline {
+        margin-right: 40%;
+    }
+}
+
 /*-----all works----*/
 .work a, .work2 a {
     text-decoration: none;
@@ -251,10 +279,28 @@ p {
     margin-right: 15%;
     margin-top: 30px;
 }
+@media screen and (max-width: 768px) {
+    .introText {
+        margin: 0;
+    }
+}
+
 .mailto {
     text-decoration: none;
     color: #757575;
 }
 .mailto:hover {
     color: #039BE5;
+}
+
+.workTxt:hover {
+    color: #039BE5;
+}
+
+.abtText:hover {
+    color: #F48FB1;
+}
+
+.resumeText:hover {
+    color: #AED581;
 }
