@@ -24,9 +24,9 @@ body {
     width: 60%;
     margin: auto;
     background-image: url("images/background.png");
-    background-position: top;
-    background-size: cover;
-    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+    background-repeat: space;
 }
 
 h1 {
@@ -230,24 +230,17 @@ p {
     .work > .workText {
         position: relative;
         top: 0;
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
-    .work > .workText > .underline {
-        margin-left: 40%;
-    }
-
     .work2 > .workImg {
         width: 100%;
     }
     .work2 > .workText {
         position: relative;
         top: 0;
-        text-align: center;
+        text-align: right;
         margin-bottom: 20px;
-    }
-    .work2 > .workText > .underline {
-        margin-right: 40%;
     }
 }
 
@@ -281,7 +274,8 @@ p {
 }
 @media screen and (max-width: 768px) {
     .introText {
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -293,11 +287,11 @@ p {
     color: #039BE5;
 }
 
-.workTxt:hover {
+.workTxt:hover{
     color: #039BE5;
 }
 
-.abtText:hover {
+.abtText:hover{
     color: #F48FB1;
 }
 
