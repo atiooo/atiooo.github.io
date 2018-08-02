@@ -351,6 +351,10 @@ p {
     display: none;
 }
 
+.mySlide4 {
+    display: none;
+}
+
 .cursor {
     cursor: pointer;
 }
@@ -378,6 +382,10 @@ p {
     opacity: 0.6;
 }
 
+.dot4 {
+    opacity: 0.6;
+}
+
 .active,
 .dot1:hover {
      opacity: 1;
@@ -391,6 +399,16 @@ p {
 .active,
 .dot3:hover {
     opacity: 1;
+}
+
+.active,
+.dot4:hover {
+    opacity: 1;
+}
+
+.link {
+    text-decoration: none;
+    color: #039BE5;
 }
 /*-------nextButton--------*/
 .next {
