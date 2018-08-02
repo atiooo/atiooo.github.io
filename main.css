@@ -311,14 +311,87 @@ p {
 
 /*-----contentPage---------*/
 .contentWrapper {
+    height: 70vh;
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 .contentImg {
     width: 100%;
+    display: inline-block;
+    float: left;
 }
 
+.contentImgRot {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    transform: rotate(90deg);
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.contentImgMulti {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+/* Slide Show */
+.mySlide1 {
+    display: none;
+}
+
+.mySlide2 {
+    display: none;
+}
+
+.mySlide3 {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.dot1 {
+    opacity: 0.6;
+}
+
+.dot2 {
+    opacity: 0.6;
+}
+
+.dot3 {
+    opacity: 0.6;
+}
+
+.active,
+.dot1:hover {
+     opacity: 1;
+ }
+
+.active,
+.dot2:hover {
+    opacity: 1;
+}
+
+.active,
+.dot3:hover {
+    opacity: 1;
+}
 /*-------nextButton--------*/
 .next {
     text-decoration: none;
