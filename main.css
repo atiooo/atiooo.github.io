@@ -196,7 +196,7 @@ p {
 .work2 {
     width: 100%;
     position: relative;
-    margin-bottom: 5em;
+    margin-bottom: 15em;
 }
 .work2 > .workText {
     position: absolute;
@@ -233,10 +233,49 @@ p {
     margin-top: 20px;
 }
 
+/*-----Work 03-----*/
+.work3 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15em;
+}
+.work3 > .workText {
+    position: absolute;
+    top: 85px;
+}
+.work3 > .workText >.underline {
+    display: block;
+    background-color: #027bff;
+    height: 3px;
+    width: 72px;
+    margin-top: 5px;
+}
+.work3 > .workBg .workImg{
+    width: 88%;
+    float: right;
+    -webkit-box-shadow: 0px 3px 20px 0px #9E9E9E;
+    -moz-box-shadow: 0px 3px 20px 0px #9E9E9E;
+    box-shadow: 0px 3px 20px 0px #9E9E9E;
+}
+/*----------onHoverChangeImg----------------*/
+/*.work3 > .workBg img:last-child {display: none}*/
+/*.work3 > .workBg:hover img:first-child {display: none}*/
+/*.work3 > .workBg:hover img:last-child {display: inline-block}*/
+
+.work3 ul {
+    position: absolute;
+    bottom: 0;
+    right: 86%;
+}
+.work3 ul li {
+    margin-top: 20px;
+}
+
+/*------------Adaptive-------------*/
 @media screen and (max-width: 768px){
     .work > .workImg {
-            width: 100%;
-        }
+        width: 100%;
+    }
     .work > .workText {
         position: relative;
         top: 0;
@@ -252,10 +291,19 @@ p {
         text-align: right;
         margin-bottom: 20px;
     }
+    .work3 > .workImg {
+        width: 100%;
+    }
+    .work3 > .workText {
+        position: relative;
+        top: 0;
+        text-align: left;
+        margin-bottom: 20px;
+    }
 }
 
 /*-----all works----*/
-.work a, .work2 a {
+.work a, .work2 a, .work3 a{
     text-decoration: none;
 }
 
