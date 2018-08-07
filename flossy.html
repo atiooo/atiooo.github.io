@@ -112,6 +112,34 @@
 
         I gained meaningful data from our interviewees. I learned from the dentists about the importance of flossing. They pointed out that floss is the only thing that can really get into the space between the teeth and remove bacteria and it does a significant amount of the work required to remove them. They also concluded that people don’t really floss regularly. I also interviewed college students and several young professionals to learn about their insights. I found that people are able to acknowledge that they know about the benefits of flossing but many of them tend to forget or not spend time to do it.</p>
 
+    <h5>Competitor Analysis</h5>
+    <p>Along with other quantitative and qualitative data, competitor analysis done right is another valuable source of evidence to design with. Studying competitor sites properly by being a user gives me the chance to see what features work well and what are not. Also, I am able to spot the common patterns in the sector that users will probably be used to.<br><br>
+        I aim to personalize the experience between users and my design. Therefore, I look up products that relate to <b>oral care + subscription + personalization</b>. I mainly focus on how other products absorb, understand, interpret, and deliver a personalized experience based on users' needs and preferences.</p><br>
+    <!----slide----->
+    <div class="mySlide1">
+        <img src="images/flossy_quip.png" style="width: 100%;">
+    </div>
+
+    <div class="mySlide1">
+        <img src="images/flossy_careof.png" style="width: 100%;">
+    </div>
+
+    <div class="mySlide1">
+        <img src="images/flossy_coco.png" style="width: 100%;">
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/flossy_quip.png" class="contentImgMulti dot1 cursor" onclick="showSlides(1,'mySlide1','dot1')" style="width: 100%;">
+        </div>
+        <div class="column">
+            <img src="images/flossy_careof.png" class="contentImgMulti dot1 cursor" onclick="showSlides(2,'mySlide1','dot1')" style="width: 100%;">
+        </div>
+        <div class="column">
+            <img src="images/flossy_coco.png" class="contentImgMulti dot1 cursor" onclick="showSlides(3,'mySlide1','dot1')" style="width: 100%;">
+        </div>
+    </div>
+
     <h5>More content will be available soon!</h5>
 </div>
 
@@ -124,6 +152,29 @@
         } else {
             x.className = "navItems";
         }
+    }
+</script>
+<!-----------slideShow----------->
+<script>
+    showSlides(1, "mySlide1", "dot1")
+    showSlides(1, "mySlide2", "dot2")
+    showSlides(1, "mySlide3", "dot3")
+    showSlides(1, "mySlide4", "dot4")
+
+
+    function showSlides(n, slide, dot) {
+        var i;
+        var slides = document.getElementsByClassName(slide);
+        var dots = document.getElementsByClassName(dot);
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[n-1].style.display = "block";
+        dots[n-1].className += " active";
     }
 </script>
 <!----------------footer------------------->
