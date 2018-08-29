@@ -500,6 +500,11 @@ p {
     color: #039BE5;
 }
 
+.iframe {
+    margin: auto;
+    width: 100%;
+}
+
 /*-------nextButton--------*/
 .next {
     text-decoration: none;
