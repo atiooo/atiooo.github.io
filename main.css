@@ -369,6 +369,7 @@ p {
     width: 100%;
     display: inline-block;
     float: left;
+    margin-bottom: 20px;
 }
 
 .contentImgRot {
@@ -384,6 +385,7 @@ p {
     width: 50%;
     display: inline-block;
     float: left;
+    margin-bottom: 20px;
 }
 
 /* Slide Show */
@@ -400,6 +402,18 @@ p {
 }
 
 .mySlide4 {
+    display: none;
+}
+
+.mySlide5 {
+     display: none;
+ }
+
+.mySlide6 {
+    display: none;
+}
+
+.mySlide7 {
     display: none;
 }
 
@@ -434,6 +448,18 @@ p {
     opacity: 0.6;
 }
 
+.dot5 {
+    opacity: 0.6;
+}
+
+.dot6 {
+     opacity: 0.6;
+ }
+
+.dot7 {
+    opacity: 0.6;
+}
+
 .active,
 .dot1:hover {
      opacity: 1;
@@ -454,10 +480,26 @@ p {
     opacity: 1;
 }
 
+.active,
+.dot5:hover {
+    opacity: 1;
+}
+
+.active,
+.dot6:hover {
+    opacity: 1;
+}
+
+.active,
+.dot7:hover {
+    opacity: 1;
+}
+
 .link {
     text-decoration: none;
     color: #039BE5;
 }
+
 /*-------nextButton--------*/
 .next {
     text-decoration: none;
