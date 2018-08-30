@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-------
+  (O_/ __ \_O)
+  / (o)__(o) \
+ (__.--\/--.__)
+====(__/\__)====
+      `--'
+      _||_
+    /'....'\
+   | :    : |
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   || `..' ||
+   ( | || | )
+    \| || |/
+     | || |
+     | || |
+     | || |
+     | || |
+     | || |
+ __,-' || '-,__
+(___,--'`--,___) Hello there!!
+                     -------->
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123062423-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123062423-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+    <link rel="stylesheet" href="https://rawgit.com/ellekasai/twemoji-awesome/gh-pages/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!------------animate.css------------------>
+    <link rel="stylesheet" href="animate.css">
+    <title>queue</title>
+</head>
+<body>
+<!-----------------Nav---------------------->
+<div class="nav">
+    <div class="name">
+        <a href="index.html"><img src="images/logo.png" height="80"></a>
+    </div>
+    <div class="navItems" id="myTopnav">
+        <a href="index.html"><p class="workTxt">work</p></a>
+        <a href="about.html"><p class="abtText">about</p></a>
+        <a href="https://drive.google.com/file/d/1XOHKMB0Bv0czHmNXq9Kai3B8067ivDju/view?usp=sharing" target="_blank"><p class="resumeText">resume</p></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-2x fa-bars"></i>
+        </a>
+
+    </div>
+</div>
+<!-------------------Intro------------------->
+<div class="intro">
+    <img src="images/queue_title.png" style="max-width:100%;height:auto;" class="profileImg">
+    <div class="content">
+        <h2>Queue<i class="twa twa-lg twa-memo"></i></h2>
+        <p>Time management android application developed by a team of 10.</p>
+    </div>
+    <div class="content">
+        <h2>Problem Space<i class="twa twa-lg twa-bow"></i></h2>
+        <p> The forgetfulness of which homework should be finished first is one that most every student has encountered. I hoped come up with a way to help UC San Diego students overcome this problem. Fortunately, other nine people happened to have the same idea in their minds. We made a team of 10 with UC San Diego community in our minds!<br><br>
+            Queue is an application created with the user in mind. We sought to find a way to better our broad and deliver something of genuine benefit. This application makes the everyday struggle of managing time on campus, a more streamlined experience. Queue allows people to choose what to do next that best suits their unique and individual needs.
+        </p>
+    </div>
+    <div class="content">
+    <h2>User Research<i class="twa twa-lg twa-family"></i></h2>
+    <p>Based on the statistics of the UC San Diego community,  We got around 28000+ undergraduates and 5700+ graduates. We made a survey as to gain a deep understanding of our users to gain a understanding or their needs. From the user research, I was able to gain an idea of what sort of issues I could potentially help address for the UC San Diego community. We gathered and analyzed all the data we got. There were feedbacks that thanked us for did this, nothing felt more rewarding than those responses.Then we created our use cases based on that. We had 36 pages of use cases. Below are a subset of those.</p>
+    <p>We found three general concepts that many individuals seem to value the most when deciding what to do on campus:<br><br>
+
+        <b>• Student valued a notification on their schedule.</b><br>
+
+        TritonLink was not able to generate push notification for students<br>
+
+        <b>• Student valued the use of Google Calendar or other Calendar App.</b><br>
+
+        TritonLink does not support a sync with Google Calendar<br>
+
+        <b>• Student valued the notification of all deadlines that they had.</b><br>
+
+        Student had to go to every course website and recorded those important dates</p>
+    <!----slide----->
+    <div class="mySlide1">
+        <img src="images/queue_uc.png" style="width: 100%;">
+    </div>
+
+    <div class="mySlide1">
+        <img src="images/queue_uc2.png" style="width: 100%;">
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="images/queue_uc.png" class="contentImgMulti dot1 cursor" onclick="showSlides(1,'mySlide1','dot1')" style="width: 100%;">
+        </div>
+        <div class="column">
+            <img src="images/queue_uc2.png" class="contentImgMulti dot1 cursor" onclick="showSlides(2,'mySlide1','dot1')" style="width: 100%;">
+        </div>
+    </div>
+
+    <h2>Prototype<i class="twa twa-lg twa-clap"></i></h2>
+    <p>After the initial user research and need-finding was complete, I created visual representations to map out the user journey and the general user flow of the interface. I then created some high-fidelity digital mockups for interactions to implement. Below are some sample screens for our application.</p>
+    <img src="images/queue_ui.png" class="contentImg">
+
+    <h2>Implementation<i class="twa twa-lg twa-iphone"></i></h2>
+    <p>We made a demo video as to introduce all team members and our application. The application can be found on Github. Below is the demo video we made. I designed & implemented all interfaces, splash screens and transition animations. Have fun. :)</p><br>
+    <iframe width="1120" height="630" src="https://www.youtube.com/embed/m-fCU78ZAVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="iframe"></iframe>
+
+    <h2>Takeaways<i class="twa twa-lg twa-rainbow"></i></h2>
+    <p>I was not able to fully develop a uniform design language as I was not familiar with Android development. I would definitely set a design language before move on to the next step in the future as to improve the consistence in design of the application.<br><br>
+
+        Also, I would fix the add class function page to allow the user to add a class easily. I would perform Heuristic Evaluation in order to ensure that the application follows the design principles and does not sacrifice usability, functionality, or aesthetics.<br><br>
+
+        While the finished product has room for change, I am proud and happy with the result. Seeing our effort really impacts UC San Diego students' quality of life can be exceptionally rewarding for me. I take pride in the progress and growth I potentially help to foster. :)
+    </p>
+    </div>
+</div>
+
+<!----------------Footer------------------->
+<div class="footer">
+    <div class="footerIcons">
+        <a href="https://www.linkedin.com/in/yutong-zhang0530/" target="=_blank"><img src="images/linkedin.png" height="24"></a>
+        <a href="https://dribbble.com/yutongz" target="=_blank"><img src="images/dribbble.png" height="24"></a>
+        <a href="https://github.com/atiooo" target="=_blank"><img src="images/github.png" height="24"></a>
+        <a href="https://www.instagram.com/_atio/" target="=_blank"><img src="images/instagram.png" height="24"></a>
+    </div>
+    <p>Made with<i class="twa twa-lg twa-sparkling-heart"></i> by Yutong</p>
+</div>
+<!------------responsive navBar---------------->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navItems") {
+            x.className += " responsive";
+        } else {
+            x.className = "navItems";
+        }
+    }
+</script>
+<!-----------slideShow----------->
+<script>
+    showSlides(1, "mySlide1", "dot1")
+    showSlides(1, "mySlide2", "dot2")
+    showSlides(1, "mySlide3", "dot3")
+    showSlides(1, "mySlide4", "dot4")
+    showSlides(1, "mySlide5", "dot5")
+    showSlides(1, "mySlide6", "dot6")
+    showSlides(1, "mySlide7", "dot7")
+
+
+    function showSlides(n, slide, dot) {
+        var i;
+        var slides = document.getElementsByClassName(slide);
+        var dots = document.getElementsByClassName(dot);
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[n-1].style.display = "block";
+        dots[n-1].className += " active";
+    }
+</script>
+</body>
+</html>

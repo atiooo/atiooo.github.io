@@ -174,9 +174,9 @@ p {
 .work > .workBg .workImg{
     width: 88%;
     float: right;
-    -webkit-box-shadow: 0px 3px 20px 0px #9E9E9E;
-    -moz-box-shadow: 0px 3px 20px 0px #9E9E9E;
-    box-shadow: 0px 3px 20px 0px #9E9E9E;
+    -webkit-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    -moz-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    box-shadow: 0px 3px 100px 0px #c2c2c2;
 }
 /*----------onHoverChangeImg----------------*/
 .work > .workBg img:last-child {display: none}
@@ -215,9 +215,9 @@ p {
 .work2 > .workBg .workImg{
     width: 88%;
     float: left;
-    -webkit-box-shadow: 0px 3px 20px 0px #9E9E9E;
-    -moz-box-shadow: 0px 3px 20px 0px #9E9E9E;
-    box-shadow: 0px 3px 20px 0px #9E9E9E;
+    -webkit-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    -moz-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    box-shadow: 0px 3px 100px 0px #c2c2c2;
 }
 /*----------onHoverChangeImg----------------*/
 .work2 > .workBg img:last-child {display: none}
@@ -253,10 +253,11 @@ p {
 .work3 > .workBg .workImg{
     width: 88%;
     float: right;
-    -webkit-box-shadow: 0px 3px 20px 0px #9E9E9E;
-    -moz-box-shadow: 0px 3px 20px 0px #9E9E9E;
-    box-shadow: 0px 3px 20px 0px #9E9E9E;
+    -webkit-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    -moz-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    box-shadow: 0px 3px 100px 0px #ededed;
 }
+
 /*----------onHoverChangeImg----------------*/
 /*.work3 > .workBg img:last-child {display: none}*/
 /*.work3 > .workBg:hover img:first-child {display: none}*/
@@ -268,6 +269,47 @@ p {
     right: 86%;
 }
 .work3 ul li {
+    margin-top: 20px;
+}
+
+/*-------Work 04------*/
+.work4 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 5em;
+}
+.work4 > .workText {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    text-align: right;
+}
+.work4 > .workText >.underline {
+    display: block;
+    background-color: #027bff;
+    height: 3px;
+    width: 72px;
+    margin-top: 5px;
+    float: right;
+}
+.work4 > .workBg .workImg{
+    width: 88%;
+    float: left;
+    -webkit-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    -moz-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    box-shadow: 0px 3px 100px 0px #ededed;
+}
+/*----------onHoverChangeImg----------------*/
+.work4 > .workBg img:last-child {display: none}
+.work4 > .workBg:hover img:first-child {display: none}
+.work4 > .workBg:hover img:last-child {display: inline-block;}
+
+.work4 ul {
+    position: absolute;
+    bottom: 0;
+    left: 86%;
+}
+.work4 ul li {
     margin-top: 20px;
 }
 
@@ -300,10 +342,19 @@ p {
         text-align: left;
         margin-bottom: 20px;
     }
+    .work4 > .workImg {
+        width: 100%;
+    }
+    .work4 > .workText {
+        position: relative;
+        top: 0;
+        text-align: right;
+        margin-bottom: 20px;
+    }
 }
 
 /*-----all works----*/
-.work a, .work2 a, .work3 a{
+.work a, .work2 a, .work3 a, .work4 a{
     text-decoration: none;
 }
 
@@ -503,6 +554,13 @@ p {
 .iframe {
     margin: auto;
     width: 100%;
+}
+/*-----sideProject---------*/
+.sideImg {
+    opacity: 0.5;
+}
+.sideImg:hover {
+    opacity: 1.0;
 }
 
 /*-------nextButton--------*/
