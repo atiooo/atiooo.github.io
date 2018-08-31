@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-------
+  (O_/ __ \_O)
+  / (o)__(o) \
+ (__.--\/--.__)
+====(__/\__)====
+      `--'
+      _||_
+    /'....'\
+   | :    : |
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   || `..' ||
+   ( | || | )
+    \| || |/
+     | || |
+     | || |
+     | || |
+     | || |
+     | || |
+ __,-' || '-,__
+(___,--'`--,___) Hello there!!
+                     -------->
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123062423-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123062423-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+    <link rel="stylesheet" href="https://rawgit.com/ellekasai/twemoji-awesome/gh-pages/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!------------animate.css------------------>
+    <link rel="stylesheet" href="animate.css">
+    <title>case</title>
+</head>
+<body>
+<!-----------------Nav---------------------->
+<div class="nav">
+    <div class="name">
+        <a href="index.html"><img src="images/logo.png" height="80"></a>
+    </div>
+    <div class="navItems" id="myTopnav">
+        <a href="index.html"><p class="workTxt">work</p></a>
+        <a href="about.html"><p class="abtText">about</p></a>
+        <a href="https://drive.google.com/file/d/1XOHKMB0Bv0czHmNXq9Kai3B8067ivDju/view?usp=sharing" target="_blank"><p class="resumeText">resume</p></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-2x fa-bars"></i>
+        </a>
+
+    </div>
+</div>
+<!-------------------Intro------------------->
+<div class="intro">
+    <div class="content">
+        <h2>A research on iphone cases<i class="twa twa-lg twa-iphone"></i></h2>
+        <p>Learn about iPhone cases in a human-centered way.</p>
+    </div>
+    <div class="content">
+        <h2>The Scope<i class="twa twa-lg twa-round-pushpin"></i></h2>
+        <p> Phone case is a fairly common thing. However, some phone cases are hard to use. We are interested in all kinds of phone cases. Our team discovered that poorly designed phone cases are significant contributors to bad user experience.
+        </p>
+    </div>
+    <div class="content">
+        <h2>Mindmap<i class="twa twa-lg twa-crystal-ball"></i></h2>
+        <p> We conducted contextual field observations as a very important step in both defining the project topic and learning more about the design space. We made a rough draft of looking at the three main topics of functionality, personal connection, and additions, is as follows:<br><br>
+        </p>
+        <img src="images/case_mm.png" class="contentImg">
+    </div>
+
+    <div class="content">
+        <h2>Interviews<i class="twa twa-lg twa-mega"></i></h2>
+        <p> For our interviews, we each conducted them across the UCSD campus. We incorporated the interview techniques we learned before, especially relating to the master/apprentice model, such as: nothing any person does is for no reason (we made it a point to comment on how the students were physically handling their phones in order to take note of their instinctive relationship with it), asking for the guided tour (letting the interviewee really lead the talking,
+            while appearing very understanding and listening intently, which resulted in interesting comments from each person), and definitely thanking people for their time (this likely made them more open to sending us photos of their cases that we may have forgotten to take ourselves).<br><br>
+            We asked the following general questions to interviewees:<br><br>
+            • When did you purchase your phone case?<br>
+            • How long have you had this phone case for?<br>
+            • Did you have a phone case before that? Why did you stop using it?<br>
+            • Why did you choose to buy it?<br>
+            • Can you give me a guided tour of how you putting it on / off?<br>
+            • Did you need the manual when putting the case on / off?<br>
+            • Does your phone case support any extension function?<br>
+            • Can you describe a daily routine with the case involved?<br>
+            • Does your phone case carry different meanings to you?<br>
+            • How do you think about your phone case?<br>
+        </p>
+    </div>
+
+    <div class="content">
+        <h2>Data Analysis<i class="twa twa-lg twa-mag-right"></i></h2>
+        <p>We created several design spaces to visualize our data:</p>
+        <!----slide----->
+        <div class="mySlide1">
+            <img src="images/case_1.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/case_2.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/case_3.png" style="width: 100%;">
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="images/case_1.png" class="contentImgMulti dot1 cursor" onclick="showSlides(1,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/case_2.png" class="contentImgMulti dot1 cursor" onclick="showSlides(2,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/case_3.png" class="contentImgMulti dot1 cursor" onclick="showSlides(3,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+        </div>
+        <p>In Figure D.1 all of the 5 type of cases were plotted on this design space graph with the factors of aesthetic vs. price. Our project mainly fit in the second and third quadrant as typically when the price increased the aesthetic aspect dropped. College students tend to not afford both aesthetically pleasing cases as well as heavy protection cases. There are no objects in the third quadrants; the ideal product would be in the top left of the second quadrant, as minimizing costs and making it as nice as possible would appeal to the buyers.<br><br>
+
+            In Figure D.2 all 5 types of cases are again plotted on the graph of protection vs. price. This is an essential graph as it shows a positive direct relationship. As price increases, the level of protection that the case provides. The ideal product here would be also be on the top left of the second quadrant, as maximizing protection while minimizing costs would make this certain case very attractive. However, when considering this hypothetical consumers might have to sacrifice weight and thickness as a tradeoff against having sturdy protection.<br><br>
+
+            In the final Figure D.3, the 5 points are plotted on a removability vs. protection graph. It is clear that the more protection corresponds more material, and often times a tighter fit for the phone. Therefore this shows a negative relationship so as protection increases the removability decreases. The ideal product here would be one that lies in the top right corner, where it is easy to remove while providing maximum protection.</p>
+    </div>
+    <div class="content">
+        <h2>Tradeoffs<i class="twa twa-lg twa-flashlight"></i></h2>
+        <p>Each design has its own tradeoffs. It is a given that cost has a direct relationship with all of the positive elements of a phone case. After collecting our data, we found 3 most important tradeoffs for phone cases. The three tradeoffs are:</p>
+        <!----slide----->
+        <div class="mySlide2">
+            <img src="images/case_tf1.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide2">
+            <img src="images/case_tf2.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide2">
+            <img src="images/case_tf3.png" style="width: 100%;">
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="images/case_tf1.png" class="contentImgMulti dot2 cursor" onclick="showSlides(1,'mySlide2','dot2')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/case_tf2.png" class="contentImgMulti dot2 cursor" onclick="showSlides(2,'mySlide2','dot2')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/case_tf3.png" class="contentImgMulti dot2 cursor" onclick="showSlides(3,'mySlide2','dot2')" style="width: 100%;">
+            </div>
+        </div>
+        <p><b>Protection vs. Weight/Thickness:</b> We discovered that increased protection had a correlation with the weight and thickness of the case. This is due to more materials corresponding to increased weight. In Figure T.1, the phone case has two components. The phone case has the outer hard shell level for protection, as well as the inner soft rubber skin to surround the entirety of the phone. Often times as thickness and weight increases, it means that the material is more sturdy and there are more surface area and distance to the actual phone designed to absorb shock if the phone is dropped.<br><br>
+
+            <b>Accessibility vs. Protection:</b> These two elements are key to any phone case, but we found that sometimes protection gets in the way of accessibility. In Figure T.2, the headphone jack to the left has accessibility issues. Since there is an abundance of the plastic material for dirt protection, some larger AUX jacks interfere with the case. The user is unable to plug in the jack without removing the case. Furthermore, in Figure T.3, the switch for silencing the phone is slightly hard to access as both the component as a depth to the phone. People with thicker fingers might find trouble with flicking the phone’s silent button. This idea also is true when you consider the opposite. Less material leads to easier access to the buttons, but it adds more risk when the phone gets into an accident.<br><br>
+
+            <b>Personalization vs. Accessibility:</b> College students tend to prioritize aesthetics over other elements of a phone case. Often this means extra personalization that includes stickers, extensions, and attachments. Similar to the idea of protection vs. accessibility, personalization often can make the phone confusing to operate. Also, having a complicated or abnormally sized phone case can also make accessing it from the pocket or bad harder. Extra components or additions might get stuck. When you increase the accessibility of the phone case, often it means a minimal design that doesn’t allow for more extensions and personalizations due to the lack of surface area or covering. For example, Sasha mentioned during his interview that the pop socket on the back of his case (Figure T.4) made it inconvenient to put his phone on certain surfaces or stick it into his pocket because it was bulky.</p>
+    </div>
+    <div class="content">
+        <h2>Takeaways<i class="twa twa-lg twa-hourglass"></i></h2>
+        <p>This project really helped me learn about human-centered design. Through our extensive research and considerations, the design space surrounding phone case has proven very complex.
+        </p>
+    </div>
+</div>
+
+<!----------------Footer------------------->
+<div class="footer">
+    <div class="footerIcons">
+        <a href="https://www.linkedin.com/in/yutong-zhang0530/" target="=_blank"><img src="images/linkedin.png" height="24"></a>
+        <a href="https://dribbble.com/yutongz" target="=_blank"><img src="images/dribbble.png" height="24"></a>
+        <a href="https://github.com/atiooo" target="=_blank"><img src="images/github.png" height="24"></a>
+        <a href="https://www.instagram.com/_atio/" target="=_blank"><img src="images/instagram.png" height="24"></a>
+    </div>
+    <p>Made with<i class="twa twa-lg twa-sparkling-heart"></i> by Yutong</p>
+</div>
+<!------------responsive navBar---------------->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navItems") {
+            x.className += " responsive";
+        } else {
+            x.className = "navItems";
+        }
+    }
+</script>
+<!-----------slideShow----------->
+<script>
+    showSlides(1, "mySlide1", "dot1")
+    showSlides(1, "mySlide2", "dot2")
+    showSlides(1, "mySlide3", "dot3")
+    showSlides(1, "mySlide4", "dot4")
+    showSlides(1, "mySlide5", "dot5")
+    showSlides(1, "mySlide6", "dot6")
+    showSlides(1, "mySlide7", "dot7")
+
+
+    function showSlides(n, slide, dot) {
+        var i;
+        var slides = document.getElementsByClassName(slide);
+        var dots = document.getElementsByClassName(dot);
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[n-1].style.display = "block";
+        dots[n-1].className += " active";
+    }
+</script>
+</body>
+</html>
