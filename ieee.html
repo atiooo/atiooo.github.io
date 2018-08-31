@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-------
+  (O_/ __ \_O)
+  / (o)__(o) \
+ (__.--\/--.__)
+====(__/\__)====
+      `--'
+      _||_
+    /'....'\
+   | :    : |
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   ||:    :||
+   || `..' ||
+   ( | || | )
+    \| || |/
+     | || |
+     | || |
+     | || |
+     | || |
+     | || |
+ __,-' || '-,__
+(___,--'`--,___) Hello there!!
+                     -------->
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123062423-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123062423-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://afeld.github.io/emoji-css/emoji.css">
+    <link rel="stylesheet" href="https://rawgit.com/ellekasai/twemoji-awesome/gh-pages/twemoji-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!------------animate.css------------------>
+    <link rel="stylesheet" href="animate.css">
+    <title>ieee</title>
+</head>
+<body>
+<!-----------------Nav---------------------->
+<div class="nav">
+    <div class="name">
+        <a href="index.html"><img src="images/logo.png" height="80"></a>
+    </div>
+    <div class="navItems" id="myTopnav">
+        <a href="index.html"><p class="workTxt">work</p></a>
+        <a href="about.html"><p class="abtText">about</p></a>
+        <a href="https://drive.google.com/file/d/1XOHKMB0Bv0czHmNXq9Kai3B8067ivDju/view?usp=sharing" target="_blank"><p class="resumeText">resume</p></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-2x fa-bars"></i>
+        </a>
+
+    </div>
+</div>
+<!-------------------Intro------------------->
+<div class="intro">
+    <img src="images/ieee_title.png" style="max-width:100%;height:auto;" class="profileImg">
+    <div class="content">
+        <h2>IEEE UC San Diego Student Branch<i class="twa twa-lg twa-fireworks"></i></h2>
+        <p>Meet my squad! :D</p>
+    </div>
+    <div class="content">
+        <h2>My Role<i class="twa twa-lg twa-wind-chime"></i></h2>
+        <p> I made all flyers and posters for every event. Additionally, I designed the business card for us! Below are some works I have done.
+        </p>
+    </div>
+    <div class="content">
+        <!----slide----->
+        <div class="mySlide1">
+            <img src="images/ieee_1.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/ieee_2.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/ieee_3.png" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/ieee_4.png" style="width: 100%;">
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="images/ieee_1.png" class="contentImgMulti dot1 cursor" onclick="showSlides(1,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/ieee_2.png" class="contentImgMulti dot1 cursor" onclick="showSlides(2,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/ieee_3.png" class="contentImgMulti dot1 cursor" onclick="showSlides(3,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/ieee_4.png" class="contentImgMulti dot1 cursor" onclick="showSlides(4,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+        </div>
+
+        <h2>Takeaways<i class="twa twa-lg twa-rice-scene"></i></h2>
+        <p>It is an awesome experience being able to be part of this organization. It is amazing to meet and know all students come together and work collaboratively. Check our <a href="https://www.facebook.com/ieeeucsd/" class="link">Facebook page</a>!
+        </p>
+    </div>
+</div>
+
+<!----------------Footer------------------->
+<div class="footer">
+    <div class="footerIcons">
+        <a href="https://www.linkedin.com/in/yutong-zhang0530/" target="=_blank"><img src="images/linkedin.png" height="24"></a>
+        <a href="https://dribbble.com/yutongz" target="=_blank"><img src="images/dribbble.png" height="24"></a>
+        <a href="https://github.com/atiooo" target="=_blank"><img src="images/github.png" height="24"></a>
+        <a href="https://www.instagram.com/_atio/" target="=_blank"><img src="images/instagram.png" height="24"></a>
+    </div>
+    <p>Made with<i class="twa twa-lg twa-sparkling-heart"></i> by Yutong</p>
+</div>
+<!------------responsive navBar---------------->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navItems") {
+            x.className += " responsive";
+        } else {
+            x.className = "navItems";
+        }
+    }
+</script>
+<!-----------slideShow----------->
+<script>
+    showSlides(1, "mySlide1", "dot1")
+    showSlides(1, "mySlide2", "dot2")
+    showSlides(1, "mySlide3", "dot3")
+    showSlides(1, "mySlide4", "dot4")
+    showSlides(1, "mySlide5", "dot5")
+    showSlides(1, "mySlide6", "dot6")
+    showSlides(1, "mySlide7", "dot7")
+
+
+    function showSlides(n, slide, dot) {
+        var i;
+        var slides = document.getElementsByClassName(slide);
+        var dots = document.getElementsByClassName(dot);
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[n-1].style.display = "block";
+        dots[n-1].className += " active";
+    }
+</script>
+</body>
+</html>
