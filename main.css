@@ -95,6 +95,13 @@ p {
     text-decoration: none;
 }
 
+/* jump to top */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+}
 
 @media screen and (max-width: 768px) {
     body {
