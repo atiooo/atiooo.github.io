@@ -321,6 +321,47 @@ p {
     margin-top: 20px;
 }
 
+/*-------Work 05------*/
+.work5 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15em;
+}
+.work5 > .workText {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    text-align: right;
+}
+.work5 > .workText >.underline {
+    display: block;
+    background-color: #027bff;
+    height: 3px;
+    width: 72px;
+    margin-top: 5px;
+    float: right;
+}
+.work5 > .workBg .workImg{
+    width: 88%;
+    float: left;
+    -webkit-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    -moz-box-shadow: 0px 3px 100px 0px #c2c2c2;
+    box-shadow: 0px 3px 100px 0px #ededed;
+}
+/*----------onHoverChangeImg----------------*/
+.work5 > .workBg img:last-child {display: none}
+.work5 > .workBg:hover img:first-child {display: none}
+.work5 > .workBg:hover img:last-child {display: inline-block;}
+
+.work5 ul {
+    position: absolute;
+    bottom: 0;
+    left: 86%;
+}
+.work5 ul li {
+    margin-top: 20px;
+}
+
 /*------------Adaptive-------------*/
 @media screen and (max-width: 768px){
     .work > .workImg {
@@ -359,10 +400,19 @@ p {
         text-align: right;
         margin-bottom: 20px;
     }
+    .work5 > .workImg {
+        width: 100%;
+    }
+    .work5 > .workText {
+        position: relative;
+        top: 0;
+        text-align: right;
+        margin-bottom: 20px;
+    }
 }
 
 /*-----all works----*/
-.work a, .work2 a, .work3 a, .work4 a{
+.work a, .work2 a, .work3 a, .work4 a, .work5 a{
     text-decoration: none;
 }
 
