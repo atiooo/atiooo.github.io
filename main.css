@@ -79,6 +79,7 @@ p {
 .navItems {
     text-align: right;
     overflow: hidden;
+    margin-top: 15px;
 }
 .navItems a, .name a {
     display: inline-block;
@@ -464,6 +465,11 @@ p {
 
 .resumeText:hover {
     color: #AED581;
+}
+
+.linkText {
+    text-decoration: none;
+    color: #F48FB1;
 }
 
 /*-----contentPage---------*/
