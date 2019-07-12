@@ -91,8 +91,47 @@
         When I saw the data for user preference, I was shocked. Three most disliked music genres were Rap, Rock and K-Pop. Since there are many shows about these kinds of music in China recently, it is hard to imagine that our users did not really appreciate them. Therefore, one thing I learned is that do not make assumptions of our users and always use data to backup my design.<br><br>
         I had chance to attend group brainstorming and design section where I could learn from the best. I enjoyed the time working with my team. I could always get advice and my mentor was always available for me. My manager pointed out that I shall utilize my degree in Computer Science. Therefore, I held a workshop about different mindset between front-end developers and designers.</p><br>
         <h2>Sparkling Moments<i class="twa twa-lg twa-snowman"></i></h2>
-        <p>Here are some pictures of my team and Beijing! :D</p>
-        <h5>Still Updating...</h5>
+        <p>Here are some pictures of my team! Xiaoice & Studio8 :D</p>
+        <!---------------photo gallery---------------->
+        <!----slide----->
+
+        <div class="mySlide1">
+            <img src="images/xiaoice_5.JPG" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/xiaoice_1.JPG" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/xiaoice_2.JPG" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/xiaoice_3.JPG" style="width: 100%;">
+        </div>
+
+        <div class="mySlide1">
+            <img src="images/xiaoice_4.JPG" style="width: 100%;">
+        </div>
+
+        <div class="row">
+            <div class="column" style="padding-right: 10px">
+                <img src="images/xiaoice_5.JPG" class="contentImgMulti dot1 cursor" onclick="showSlides(1,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column" style="padding-right: 10px">
+                <img src="images/xiaoice_1.JPG" class="contentImgMulti dot1 cursor" onclick="showSlides(2,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column" style="padding-right: 10px">
+                <img src="images/xiaoice_2.JPG" class="contentImgMulti dot1 cursor" onclick="showSlides(3,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column" style="padding-right: 10px">
+                <img src="images/xiaoice_3.JPG" class="contentImgMulti dot1 cursor" onclick="showSlides(4,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+            <div class="column">
+                <img src="images/xiaoice_4.JPG" class="contentImgMulti dot1 cursor" onclick="showSlides(5,'mySlide1','dot1')" style="width: 100%;">
+            </div>
+        </div>
 
 
 
@@ -107,6 +146,32 @@
             } else {
                 x.className = "navItems";
             }
+        }
+    </script>
+    <!-----------slideShow----------->
+    <script>
+        showSlides(1, "mySlide1", "dot1")
+        showSlides(1, "mySlide2", "dot2")
+        showSlides(1, "mySlide3", "dot3")
+        showSlides(1, "mySlide4", "dot4")
+        showSlides(1, "mySlide5", "dot5")
+        showSlides(1, "mySlide6", "dot6")
+        showSlides(1, "mySlide7", "dot7")
+
+
+        function showSlides(n, slide, dot) {
+            var i;
+            var slides = document.getElementsByClassName(slide);
+            var dots = document.getElementsByClassName(dot);
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[n-1].style.display = "block";
+            dots[n-1].className += " active";
         }
     </script>
     <!----------------footer------------------->
