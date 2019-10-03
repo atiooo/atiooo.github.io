@@ -467,6 +467,10 @@ p {
     color: #AED581;
 }
 
+.blogText:hover {
+    color: #FFCC4D;
+}
+
 .linkText {
     text-decoration: none;
     color: #F48FB1;
