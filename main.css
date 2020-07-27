@@ -432,7 +432,7 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4em;
+    margin-top: 2em;
 }
 .content {
     text-align: left;
@@ -505,6 +505,13 @@ p {
     display: inline-block;
     float: left;
     margin-bottom: 20px;
+}
+.contentGif {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 28px;
 }
 
 /* Photo Gallery */
