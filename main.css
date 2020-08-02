@@ -490,6 +490,9 @@ p {
     float: left;
     margin-bottom: 20px;
 }
+.contentImgLg {
+    text-align: center;
+}
 
 .contentImgRot {
     width: 30%;
