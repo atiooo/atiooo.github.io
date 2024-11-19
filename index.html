@@ -2,17 +2,55 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <style>
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 80%;
+    max-width: 960px;
+    padding-top: 200px;
+    margin: auto;
+    animation: fadeIn ease-in 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn{
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: large;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
 }
 
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  min-width: 360px;
+  padding-right: 50px;
 }
 
 /* Clear floats after the columns */
@@ -21,22 +59,55 @@
   display: table;
   clear: both;
 }
+.contact {
+    padding-top: 160px;
+}
+
+/* Links and hover color */
+a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.metaLinks:hover {
+    color: cornflowerblue;
+}
+
+.msftLinks:hover {
+    color:rgb(54, 218, 136);
+}
+
+.botLinks:hover {
+    color:lightpink
+}
+
 </style>
 </head>
 <body>
-
-<h2>Two Equal Columns</h2>
-
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
+  <div class="column">
+      <div class="content">
+        <h1>Hello, I am Yutong</h1>
+        <p>Product design <a href="https://www.meta.com/smart-glasses/" target="blank" class="metaLinks">@meta</a> <br> Lives in San Mateo, CA</p>
+        <p>Currently building 0-1 messaging, sharing, and connection experiences on wearables (Ray Ban Meta and more!) <a href="https://about.meta.com/realitylabs/orion/" target="blank" class="metaLinks">@meta</a>. Previously building World AR experiences @meta, cacual games on Teams, and XiaoIce AI <a href="https://news.microsoft.com/apac/features/much-more-than-a-chatbot-chinas-xiaoice-mixes-ai-with-emotions-and-wins-over-millions-of-fans/" target="blank" class="msftLinks">@microsoft</a>.<br> <br>
+        Outside of work you will find me at movement gyms or clayroom...</p>
+      </div>
+      <div class="contact">
+        <p>Find me elsewhere
+        <br>
+        <a href="https://drive.google.com/file/d/1soPHFO8e0CbnJlAcYNYAbbsyT8dGLbnG/view?usp=sharing" target="_blank" class="botLinks">Resume</a>
+        <br>
+        <a href="https://www.linkedin.com/in/yzhang0530/" target="_blank" class="botLinks">LinkedIn</a>
+        <br>
+        <a href="https://www.instagram.com/_atio/" target="_blank" class="botLinks">Instagram</a>
+    </p></div>
   </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
-    <p>Some text..</p>
+  <div class="column">
+    <img src="image/mainPic.jpeg" alt="a picture of me standing next to the golden gate bridge from far away" width="491px" height="656px">
   </div>
 </div>
+<p style="font-size: 11px; font-weight: 400; text-align: center; margin-top: 10%;">Yutong Zhang 2024 ©</p>
 
 </body>
 </html>
