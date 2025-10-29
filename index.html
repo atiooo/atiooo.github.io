@@ -9,6 +9,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  /* font-family: "Inter", sans-serif; */
 }
 
 body {
@@ -41,9 +42,19 @@ h3 {
     font-size: large;
     font-weight: 600;
 }
+h4 {
+  font-size: small;
+  margin: 0%;
+}
 
 p {
-    font-weight: 300;
+    font-size: smaller;
+    font-weight: 400;
+}
+
+.projectList {
+    font-size: smaller;
+    font-weight: 400;
 }
 
 /* Create two equal columns that floats next to each other */
@@ -61,21 +72,21 @@ p {
   clear: both;
 }
 .contact {
-    padding-top: 120px;
+    padding-top: 48px;
 }
 
 /* Links and hover color */
 a {
     text-decoration: none;
-    color: #222;
+    color: #444;
     font-weight: 500;
 }
 
-.metaLinks:hover {
+.blueLinks:hover {
     color: cornflowerblue;
 }
 
-.msftLinks:hover {
+.greenLinks:hover {
     color:rgb(54, 218, 136);
 }
 
@@ -96,13 +107,25 @@ img {
   <div class="column">
       <div class="content">
         <h1>Hello, I am Yutong &#10024;</h1>
-        <p>👩🏻‍🎨 Product designer <a href="https://www.meta.com/smart-glasses/" target="blank" class="metaLinks">@meta</a> <br> &#127968; Lives in San Mateo, CA</p>
-        <p>Currently building 0-1 messaging, sharing, and connection experiences on wearables (Ray Ban Meta &#128374; and more!) <a href="https://about.meta.com/realitylabs/orion/" target="blank" class="metaLinks">@meta</a>. Previously working on World AR experiences <a href="https://spark.meta.com/" target="blank" class="metaLinks">@meta</a>, casual games on Teams &#127918;, and XiaoIce AI 👩🏻‍💼 <a href="https://news.microsoft.com/apac/features/much-more-than-a-chatbot-chinas-xiaoice-mixes-ai-with-emotions-and-wins-over-millions-of-fans/" target="blank" class="msftLinks">@microsoft</a>.<br> <br>
-        Outside of work you will find me at movement gyms 🧗🏻‍♀️ or clayroom 🪴...</p>
+        <p>👩🏻‍🎨 Senior product designer <a href="https://www.meta.com/ai-glasses/" target="blank" class="blueLinks">@meta</a> <br> &#127968; Lives in San Mateo, CA</p>
+        <p>Designing how people connect, share, and communicate through AI wearables — from Ray-Ban Meta smart glasses to new Meta Ray-Ban Display. I build 0→1 experiences that turn complex technology into simple, human interactions.
+        <br><br>Outside of work you will find me at movement gyms 🧗🏻‍♀️</p>
       </div>
+
+      <div class="projects">
+        <h4>Projects</h4>
+        <ul class="projectList">
+          <li><a href="https://www.meta.com/help/ai-glasses/1296226131989237/?srsltid=AfmBOoqU8uh4pO3DQ5Gknmf6yUhCwAQE3x5sYOAkkWRREDbjhnducOt_" target="blank" class="greenLinks">Quick Connect on AI glasses</a></li>
+          <li><a href="https://www.meta.com/ai-glasses/meta-ray-ban-display/" target="blank" class="greenLinks">Account Linking on Meta Ray Ban Display</a></li>
+          <li><a href="https://www.meta.com/ai-glasses/ray-ban-meta-wayfarer-gen-2/" target="blank" class="greenLinks">Instagram Direct on Ray-Ban Meta</a></li></li>
+          <li><a href="https://www.meta.com/help/ai-glasses/647079267216457/?srsltid=AfmBOornzL69vvxdaGMFwlpgZbHsd1eSWIdWsyAx3N8aO5O7zAaGhvln" target="blank" class="greenLinks">Share to glasses on Ray-Ban Meta</a></li></li>
+          <li>Messaging & Sharing on confidential wearable</li>
+        </ul>
+      </div>
+
       <div class="contact">
-        <p>Find me elsewhere
-        <br>
+        <h4>Find me elsewhere</h4>
+        <p>
         <a href="https://drive.google.com/file/d/1soPHFO8e0CbnJlAcYNYAbbsyT8dGLbnG/view?usp=sharing" target="_blank" class="botLinks">📝 Resume</a>
         <br>
         <a href="https://www.linkedin.com/in/yzhang0530/" target="_blank" class="botLinks">&#128391; LinkedIn</a>
@@ -114,7 +137,7 @@ img {
     <img src="image/mainPic.jpeg" alt="a picture of me standing next to the golden gate bridge from far away" width="491px" height="656px">
   </div>
 </div>
-<p style="font-size: 11px; font-weight: 400; text-align: center; margin-top: 10%;">Yutong Zhang 2024 ©</p>
+<p style="font-size: 11px; font-weight: 400; text-align: center; margin-top: 10%;">Yutong Zhang 2025 ©</p>
 
 </body>
 </html>
