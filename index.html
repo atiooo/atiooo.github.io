@@ -1,143 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-* {
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  /* font-family: "Inter", sans-serif; */
-}
-
-body {
-    width: 80%;
-    max-width: 960px;
-    padding-top: 200px;
-    margin: auto;
-    animation: fadeIn ease-in 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn{
-    0% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(-10px);
-        opacity: 1;
-    }
-}
-
-h2 {
-    font-size: x-large;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: large;
-    font-weight: 600;
-}
-h4 {
-  font-size: small;
-  margin: 0%;
-}
-
-p {
-    font-size: smaller;
-    font-weight: 400;
-}
-
-.projectList {
-    font-size: smaller;
-    font-weight: 400;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  min-width: 360px;
-  padding-right: 50px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.contact {
-    padding-top: 48px;
-}
-
-/* Links and hover color */
-a {
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
-}
-
-.blueLinks:hover {
-    color: cornflowerblue;
-}
-
-.greenLinks:hover {
-    color:rgb(54, 218, 136);
-}
-
-.botLinks:hover {
-    color:lightpink
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  padding-top: 24px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yutong Zhang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="row">
-  <div class="column">
-      <div class="content">
-        <h1>Hello, I am Yutong &#10024;</h1>
-        <p>👩🏻‍🎨 Senior product designer <a href="https://www.meta.com/ai-glasses/" target="blank" class="blueLinks">@meta</a> <br> &#127968; Lives in San Mateo, CA</p>
-        <p>Designing how people connect, share, and communicate through AI wearables — from Ray-Ban Meta smart glasses to new Meta Ray-Ban Display. I build 0→1 experiences that turn complex technology into simple, human interactions.
-        <br><br>Outside of work you will find me at movement gyms 🧗🏻‍♀️</p>
-      </div>
+    <div class="portfolio-container">
+        <!-- Background -->
+        <div class="background-layer">
+            <img src="images/bg.png" alt="Background" class="bg-img">
+        </div>
 
-      <div class="projects">
-        <h4>Projects</h4>
-        <ul class="projectList">
-          <li><a href="https://www.meta.com/help/ai-glasses/1296226131989237/?srsltid=AfmBOoqU8uh4pO3DQ5Gknmf6yUhCwAQE3x5sYOAkkWRREDbjhnducOt_" target="blank" class="greenLinks">Quick Connect on AI glasses</a></li>
-          <li><a href="https://www.meta.com/ai-glasses/meta-ray-ban-display/" target="blank" class="greenLinks">Account Linking on Meta Ray Ban Display</a></li>
-          <li><a href="https://www.meta.com/ai-glasses/ray-ban-meta-wayfarer-gen-2/" target="blank" class="greenLinks">Instagram Direct on Ray-Ban Meta</a></li></li>
-          <li><a href="https://www.meta.com/help/ai-glasses/647079267216457/?srsltid=AfmBOornzL69vvxdaGMFwlpgZbHsd1eSWIdWsyAx3N8aO5O7zAaGhvln" target="blank" class="greenLinks">Share to glasses on Ray-Ban Meta</a></li></li>
-          <li>Messaging & Sharing on confidential wearable</li>
-        </ul>
-      </div>
+        <main class="content-grid">
+            <!-- Left Column: Intro -->
+            <section class="left-column">
+                <div class="intro-content">
+                    <h1 class="greeting">Hello, I am Yutong.</h1>
+                    
+                    <div class="role-location">
+                        <p>Building AI wearables experiences at Meta</p>
+                        <p>Based in San Mateo, CA</p>
+                    </div>
 
-      <div class="contact">
-        <h4>Find me elsewhere</h4>
-        <p>
-        <a href="https://drive.google.com/file/d/1soPHFO8e0CbnJlAcYNYAbbsyT8dGLbnG/view?usp=sharing" target="_blank" class="botLinks">📝 Resume</a>
-        <br>
-        <a href="https://www.linkedin.com/in/yzhang0530/" target="_blank" class="botLinks">&#128391; LinkedIn</a>
-        <br>
-        <a href="https://www.instagram.com/_atio/" target="_blank" class="botLinks">📷 Instagram</a>
-    </p></div>
-  </div>
-  <div class="column">
-    <img src="image/mainPic.jpeg" alt="a picture of me standing next to the golden gate bridge from far away" width="491px" height="656px">
-  </div>
-</div>
-<p style="font-size: 11px; font-weight: 400; text-align: center; margin-top: 10%;">Yutong Zhang 2025 ©</p>
+                    <div class="bio-text">
+                        <p>I design system-level interaction experiences for AI wearables — from Ray-Ban Meta smart glasses to Meta Ray-Ban Display.</p>
+                        <br>
+                        <p>My work focuses on cross-device sharing, communication, and AI-assisted flows, where constraints, timing, and user confidence matter more than speed.</p>
+                        <br>
+                        <p>I specialize in 0→1 experiences that translate complex, emerging technology into reliable, human interactions across devices.</p>
+                    </div>
+                </div>
 
+            </section>
+
+            <!-- Right Column: Projects -->
+            <section class="right-column">
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="project-list">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="card-glass-bg"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-title-group">
+                                    <div class="project-icon">
+                                        <img src="images/icon-meta-1.png" alt="Meta Icon">
+                                    </div>
+                                    <h3>Quick Connect</h3>
+                                </div>
+                                <span class="year">2025</span>
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="project-desc">Enabled one-gesture communication across AI wearables</p>
+                                <a href="https://www.engadget.com/wearables/metas-smart-glasses-have-a-new-shortcut-to-call-and-text-without-saying-hey-meta-213303178.html" class="view-link" target="_blank" rel="noopener noreferrer">View feature review ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="card-glass-bg"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-title-group">
+                                    <div class="project-icon">
+                                        <img src="images/icon-meta-2.png" alt="Meta Icon" class="full-cover">
+                                    </div>
+                                    <h3>WhatsApp Account Linking</h3>
+                                </div>
+                                <span class="year">2025</span>
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="project-desc">Reduced setup friction and improved reliability for WhatsApp on Ray Ban Meta Display</p>
+                                <p class="view-link note">Coming soon · confidential</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="card-glass-bg"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-title-group">
+                                    <div class="project-icon">
+                                        <img src="images/icon-meta-1.png" alt="Meta Icon">
+                                    </div>
+                                    <h3>Messaging & Sharing</h3>
+                                </div>
+                                <span class="year">2025</span>
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="project-desc">Defined core communication experiences on AI wearables</p>
+                                <p class="view-link note">Coming soon · confidential</p>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 4 -->
+                     <article class="project-card">
+                        <div class="card-glass-bg"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-title-group">
+                                    <div class="project-icon">
+                                        <img src="images/icon-meta-3.png" alt="Meta Icon">
+                                    </div>
+                                    <h3>Public Sharing on Glasses</h3>
+                                </div>
+                                <span class="year">2024</span>
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="project-desc">Reimagined public sharing flows on AI glasses</p>
+                                <a href="https://www.figma.com/slides/NrNsVMvys6M61RxrnT6HHf/Sample-Case-Study---Yutong?node-id=5005-6944&t=ee8fqa1rgosclDQA-1" class="view-link" target="_blank" rel="noopener noreferrer">View sample case study ↗</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <div class="hero-image-container">
+            <img src="images/hero.png" alt="Profile Hero" class="hero-img">
+        </div>
+
+        <div class="social-links-container">
+             <div class="social-links">
+                <a href="https://www.linkedin.com/in/yzhang0530/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/social-1.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/_atio/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/social-2.png" alt="Instagram">
+                </a>
+                 <a href="https://drive.google.com/file/d/1soPHFO8e0CbnJlAcYNYAbbsyT8dGLbnG/view?usp=sharing" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="images/social-3.png" alt="Resume">
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
