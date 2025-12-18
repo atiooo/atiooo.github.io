@@ -1,0 +1,394 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    background-color: #000;
+    color: #F2F2F2;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Container & Layout */
+.portfolio-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center content */
+    padding: 0 4rem; /* Horizontal padding only */
+}
+
+.background-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* Hero Image Centered */
+.hero-image-container {
+    position: absolute; /* Changed to absolute within container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    z-index: 1; 
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+}
+
+@keyframes float {
+    0% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -55%); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+.content-grid {
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px; /* Increased slightly to allow separation */
+    width: 100%;
+    gap: 8rem; /* Increased gap to push cards to the right */
+    padding: 0;
+    padding-bottom: 6rem; /* Add padding at bottom to clear the nav */
+    position: relative;
+    z-index: 2;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
+
+/* Left Column */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    max-width: 500px;
+}
+
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.greeting {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.role-location {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(242, 242, 242, 0.9);
+    line-height: 1.5;
+}
+
+.bio-text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(242, 242, 242, 0.85);
+    margin-top: 1rem;
+    max-width: 440px;
+}
+
+/* Right Column */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding-right: 2rem;
+    max-width: 600px; 
+    /* removed margin-left: auto to allow centering */
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* iOS Liquid Glass Card Style */
+.project-card {
+    position: relative;
+    width: 100%;
+    border-radius: 32px;
+    overflow: hidden;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* The Glass Effect */
+    background: rgba(40, 45, 40, 0.4); /* Dark greenish tint from screenshot */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    /* Border and Shadow */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        0 4px 24px -1px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover {
+    background: rgba(50, 55, 50, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 
+        0 12px 32px -2px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.project-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px; /* slightly more rounded for iOS feel */
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-icon img.full-cover {
+    width: 100%; 
+    height: 100%;
+    margin: 0;
+}
+
+.card-title-group h3 {
+    font-size: 19px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: -0.01em;
+}
+
+.year {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.card-body {
+    padding-left: 0; /* Aligned left */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+}
+
+.view-link {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 4px;
+    transition: color 0.2s;
+}
+
+.view-link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Social Links at Bottom */
+.social-links-container {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Ensure icons are white */
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    body {
+        overflow-y: auto; /* Allow scrolling on tablets/mobile */
+        height: auto;
+    }
+
+    .portfolio-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem;
+        display: block; /* Standard block layout */
+    }
+
+    .background-layer .bg-img {
+        animation: none; /* Disable background animation */
+    }
+
+    .content-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .hero-image-container {
+        display: none; /* Hide hero image on tablet/mobile as requested */
+    }
+    
+    .left-column {
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+        max-width: 600px;
+    }
+
+    .greeting {
+        font-size: 32px; /* Smaller text */
+    }
+
+    .bio-text {
+        max-width: 100%;
+        font-size: 15px;
+    }
+    
+    .right-column {
+        padding-right: 0;
+        width: 100%;
+        max-width: 100%; /* Full width cards */
+    }
+    
+    .social-links-container {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin: 3rem auto 1rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Mobile specific tweaks */
+@media (max-width: 600px) {
+    .portfolio-container {
+        padding: 1.5rem;
+    }
+
+    .greeting {
+        font-size: 28px;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+
+    .card-title-group h3 {
+        font-size: 17px;
+    }
+
+    .year {
+        font-size: 14px;
+    }
+}
