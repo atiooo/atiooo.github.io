@@ -233,8 +233,19 @@
 
 @media (max-width: 600px) {
     .modal-card {
-        width: 95%;
-        max-height: 95vh;
+        width: 90vw;
+        height: 75vh; /* Smaller fixed height */
+        max-height: 75vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /* Card fixed, content scrolls */
+    }
+
+    .modal-content {
+        height: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 80px 24px 32px; /* Ensure space for fixed toolbar */
     }
 
     .modal-actions {
@@ -514,17 +525,27 @@
 /* Mobile Screens */
 @media (max-width: 600px) {
     .modal-overlay.quick-connect-mode .modal-card {
-        width: 95vw;
-        max-height: 95vh;
+        width: 90vw;
+        height: 75vh; /* Smaller view box for better reachability */
+        max-height: 75vh;
         border-radius: 24px;
+        overflow: hidden; /* Container fixed, inner content scrolls */
     }
 
     .qc-container {
-        padding: 60px 20px 24px;
+        padding: 0; /* Reset padding */
+        height: 100%;
+        position: relative;
     }
     
     .qc-content-wrapper {
-        gap: 32px;
+        height: 100%;
+        overflow-y: auto; /* Enable inner scrolling */
+        -webkit-overflow-scrolling: touch;
+        padding: 80px 24px 32px; /* Top padding to clear fixed toolbar */
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .qc-right-col {
@@ -554,8 +575,13 @@
     }
     
     .qc-toolbar {
-        padding: 16px;
+        position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 50;
+        /* Add a subtle gradient behind close button for readability */
+        background: linear-gradient(to bottom, rgba(30, 30, 30, 0.8) 0%, rgba(30, 30, 30, 0) 100%);
     }
 }
