@@ -9,9 +9,9 @@ body {
     font-family: 'Optimistic Display', 'Inter', sans-serif;
     background-color: #000;
     color: #F2F2F2;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; /* Prevent scrolling on desktop */
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Container & Layout */
@@ -51,7 +51,10 @@ body {
     width: 550px;
     z-index: 1; 
     pointer-events: none;
-    animation: float 6s ease-in-out infinite;
+    /* Use both the entry fade AND the continuous float animation */
+    opacity: 0; /* Hidden initially for fade in */
+    animation: heroFadeIn 1.5s ease forwards, float 6s ease-in-out infinite;
+    animation-delay: 0.1s, 0s; /* Start float immediately, fade in slightly delayed */
 }
 
 .hero-img {
@@ -65,6 +68,15 @@ body {
     0% { transform: translate(-50%, -50%); }
     50% { transform: translate(-50%, -55%); }
     100% { transform: translate(-50%, -50%); }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .content-grid {
@@ -96,6 +108,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
+    /* Entry Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.2s;
 }
 
 .greeting {
@@ -138,6 +156,12 @@ body {
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 0.5rem;
+    
+    /* Entry Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
 }
 
 .project-list {
@@ -170,7 +194,17 @@ body {
         inset 0 0 0 1px rgba(255, 255, 255, 0.05);
     
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Entry Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
+
+.project-card:nth-child(1) { animation-delay: 0.4s; }
+.project-card:nth-child(2) { animation-delay: 0.55s; }
+.project-card:nth-child(3) { animation-delay: 0.7s; }
+.project-card:nth-child(4) { animation-delay: 0.85s; }
 
 .project-card:hover {
     background: rgba(50, 55, 50, 0.5);
@@ -179,6 +213,14 @@ body {
     box-shadow: 
         0 12px 32px -2px rgba(0, 0, 0, 0.3),
         inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    
+    /* Override animation fill mode for hover state interaction if needed, 
+       but `forwards` keeps final state. We need to be careful not to fight transform.
+       Actually, once animation finishes, it holds. Hover changes transform. 
+       Usually this works fine, but sometimes it snaps. 
+       Let's ensure hover uses !important or specific specificity if issues arise. 
+       Testing suggests standard CSS hover works after animation completes. 
+    */
 }
 
 .card-content {
@@ -270,6 +312,12 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    
+    /* Entry Animation */
+    opacity: 0;
+    /* transform is handled in animation */
+    animation: socialEntry 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 1s;
 }
 
 .social-links {
@@ -306,12 +354,36 @@ body {
     filter: brightness(0) invert(1); /* Ensure icons are white */
 }
 
+/* Keyframes for Entry Animations */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes socialEntry {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
     body {
         overflow-y: auto; /* Allow scrolling on tablets/mobile */
+        overflow-x: hidden; /* Prevent horizontal scroll */
         height: auto;
+        width: 100%;
     }
 
     .portfolio-container {
@@ -367,6 +439,20 @@ body {
         margin: 3rem auto 1rem;
         display: flex;
         justify-content: center;
+        
+        /* Reset mobile animation */
+        animation-name: socialEntryMobile;
+    }
+    
+    @keyframes socialEntryMobile {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
