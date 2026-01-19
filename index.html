@@ -14,7 +14,7 @@
     <div class="portfolio-container">
         <!-- Background -->
         <div class="background-layer">
-            <img src="images/BG.png" alt="Background" class="bg-img">
+            <img src="images/bg.png" alt="Background" class="bg-img">
         </div>
 
         <main class="content-grid">
@@ -153,7 +153,8 @@
     <!-- Reusable Modal Structure -->
     <div class="modal-overlay" id="project-modal">
         <div class="modal-card">
-            <div class="modal-toolbar">
+            <!-- Close button for default modal -->
+             <div class="modal-toolbar" id="default-toolbar">
                 <button class="modal-close-btn" id="close-modal">
                     <img src="images/X.png" alt="Close">
                 </button>
@@ -169,11 +170,12 @@
         const modal = document.getElementById('project-modal');
         const contentArea = document.getElementById('modal-content-area');
         const closeBtn = document.getElementById('close-modal');
+        const defaultToolbar = document.getElementById('default-toolbar');
 
         // Project Data
         const projects = {
             'quick-connect': {
-                icon: 'images/icon-meta-1.png',
+                icon: 'images/icon-meta-1.png', // Or new downloaded icon
                 title: 'Quick Connect',
                 subtitle: 'Lead designer · 2025',
                 description: 'Led the end-to-end design of Quick Connect, a one-gesture shortcut on AI smart glasses that lets users reach a chosen contact for calling or messaging, and share recent captures contextually without pulling out a phone.',
@@ -182,7 +184,8 @@
                 buttons: [
                     { text: 'View feature review', link: 'https://www.engadget.com/wearables/metas-smart-glasses-have-a-new-shortcut-to-call-and-text-without-saying-hey-meta-213303178.html', primary: true },
                     { text: 'Setup instruction', link: 'https://www.meta.com/help/ai-glasses/1296226131989237/?srsltid=AfmBOorFljn6JGObO9QeBc3J7qWLds1pFYgoM0V-ohXdsBR6p6pV_FZP', primary: false }
-                ]
+                ],
+                setupImage: 'images/qc_setup.gif' // Placeholder for now, eventually 'images/qc_setup_1.png'
             },
             'whatsapp': {
                 icon: 'images/icon-meta-2.png',
@@ -212,45 +215,108 @@
             const data = projects[projectId];
             if (!data) return;
 
-            const buttonsHtml = data.buttons.map(btn => {
-                if (btn.link) {
-                    return `<a href="${btn.link}" class="modal-btn ${btn.primary ? 'btn-primary' : 'btn-secondary'}" target="_blank" rel="noopener noreferrer">${btn.text}</a>`;
-                } else {
-                    return `<span class="modal-btn btn-secondary" style="cursor: default; opacity: 0.6;">${btn.text}</span>`;
-                }
-            }).join('');
+            // Reset classes
+            modal.classList.remove('quick-connect-mode');
+            defaultToolbar.style.display = 'flex'; // Show default toolbar by default
 
-            contentArea.innerHTML = `
-                <div class="modal-header">
-                    <div class="modal-title-row">
-                        <div class="modal-icon">
-                            <img src="${data.icon}" alt="Icon" class="${projectId === 'whatsapp' ? 'full-cover' : ''}">
-                        </div>
-                        <div class="modal-title-text">
-                            <h2>${data.title}</h2>
-                            <p class="modal-subtitle">${data.subtitle}</p>
-                        </div>
+            if (projectId === 'quick-connect') {
+                modal.classList.add('quick-connect-mode');
+                defaultToolbar.style.display = 'none'; // Hide default toolbar, use custom inside
+
+                const buttonsHtml = data.buttons.map(btn => {
+                    return `<a href="${btn.link}" class="qc-btn ${btn.primary ? 'qc-btn-primary' : 'qc-btn-secondary'}" target="_blank" rel="noopener noreferrer">${btn.text}</a>`;
+                }).join('');
+
+                contentArea.innerHTML = `
+                    <div class="qc-glass-layer">
+                         <div class="qc-glass-bg"></div>
+                         <div class="qc-glass-blur"></div>
                     </div>
-                </div>
-
-                <div class="modal-details">
-                    <p class="modal-description">${data.description}</p>
                     
-                    <div class="modal-section">
-                        <p class="detail-label">Impact</p>
-                        <p class="detail-text">${data.impact}</p>
+                    <div class="qc-container">
+                         <div class="qc-toolbar">
+                            <button class="modal-close-btn" onclick="closeModal()">
+                                <img src="images/X.png" alt="Close">
+                            </button>
+                        </div>
+
+                        <div class="qc-content-wrapper">
+                            <div class="qc-left-col">
+                                <div class="qc-header-group">
+                                    <div class="qc-icon-wrapper">
+                                        <img src="${data.icon}" alt="Icon">
+                                    </div>
+                                    <div class="qc-title-text">
+                                        <h2 class="qc-title">${data.title}</h2>
+                                        <p class="qc-subtitle">${data.subtitle}</p>
+                                    </div>
+                                </div>
+
+                                <p class="qc-description">${data.description}</p>
+                                
+                                <div class="qc-section">
+                                    <p class="qc-label">Impact</p>
+                                    <p class="qc-text">${data.impact}</p>
+                                </div>
+
+                                <div class="qc-section">
+                                    <p class="qc-label">Keywords</p>
+                                    <p class="qc-text">${data.keywords}</p>
+                                </div>
+
+                                <div class="qc-actions">
+                                    ${buttonsHtml}
+                                </div>
+                            </div>
+
+                            <div class="qc-right-col">
+                                <img src="${data.setupImage}" alt="Setup Preview" class="qc-setup-img">
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Default Modal Render (Previous implementation)
+                const buttonsHtml = data.buttons.map(btn => {
+                    if (btn.link) {
+                        return `<a href="${btn.link}" class="modal-btn ${btn.primary ? 'btn-primary' : 'btn-secondary'}" target="_blank" rel="noopener noreferrer">${btn.text}</a>`;
+                    } else {
+                        return `<span class="modal-btn btn-secondary" style="cursor: default; opacity: 0.6;">${btn.text}</span>`;
+                    }
+                }).join('');
+
+                contentArea.innerHTML = `
+                    <div class="modal-header">
+                        <div class="modal-title-row">
+                            <div class="modal-icon">
+                                <img src="${data.icon}" alt="Icon" class="${projectId === 'whatsapp' ? 'full-cover' : ''}">
+                            </div>
+                            <div class="modal-title-text">
+                                <h2>${data.title}</h2>
+                                <p class="modal-subtitle">${data.subtitle}</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="modal-section">
-                        <p class="detail-label">Keywords</p>
-                        <p class="detail-text">${data.keywords}</p>
-                    </div>
-                </div>
+                    <div class="modal-details">
+                        <p class="modal-description">${data.description}</p>
+                        
+                        <div class="modal-section">
+                            <p class="detail-label">Impact</p>
+                            <p class="detail-text">${data.impact}</p>
+                        </div>
 
-                <div class="modal-actions">
-                    ${buttonsHtml}
-                </div>
-            `;
+                        <div class="modal-section">
+                            <p class="detail-label">Keywords</p>
+                            <p class="detail-text">${data.keywords}</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        ${buttonsHtml}
+                    </div>
+                `;
+            }
         }
 
         // Open function
@@ -264,7 +330,7 @@
         }
 
         // Close functions
-        function closeModal() {
+        window.closeModal = function() { // Exposed to global scope for the inline onclick in QC modal
             modal.classList.remove('active');
             setTimeout(() => {
                 if (!modal.classList.contains('active')) {
