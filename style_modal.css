@@ -248,3 +248,314 @@
     }
 }
 
+/* Specific styles for Quick Connect Modal (ProjectQC_1) */
+
+/* Override modal width for Quick Connect */
+.modal-overlay.quick-connect-mode .modal-card {
+    width: 1173px;
+    max-width: 95vw;
+    height: 683px; /* Fixed height from design */
+    max-height: 90vh;
+    padding: 0;
+    
+    /* Inherit standardized glass styles */
+    border-radius: 32px; 
+    
+    background: rgba(40, 45, 40, 0.4); 
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        0 4px 24px -1px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    overflow: hidden;
+}
+
+/* IMPORTANT: Reset default modal-content padding for QC mode */
+.modal-overlay.quick-connect-mode .modal-content {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Glass backgrounds - No longer needed as separate layers since we use .modal-card directly */
+.qc-glass-layer {
+    display: none;
+}
+
+/* Layout */
+.qc-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px; 
+    box-sizing: border-box;
+}
+
+/* Toolbar (Custom for this modal) */
+.qc-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    z-index: 20; 
+    pointer-events: none;
+}
+
+.qc-toolbar button {
+    pointer-events: auto;
+}
+
+/* Content Layout */
+.qc-content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.qc-left-col {
+    width: 763px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: center;
+    color: white;
+    text-align: left;
+}
+
+.qc-right-col {
+    width: 250px;
+    height: 521px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.qc-setup-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 42px; /* Desktop default */
+    object-fit: cover; /* Ensure it fills the rounded container */
+    background-color: transparent; 
+    display: block; /* Remove inline-block spacing */
+}
+
+/* Typography & Details */
+.qc-header-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.qc-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.qc-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qc-title-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.qc-title {
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.qc-subtitle {
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.qc-description {
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.qc-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.qc-label {
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.33);
+    margin: 0;
+}
+
+.qc-text {
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Buttons */
+.qc-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.qc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 20px;
+    border-radius: 100px;
+    font-family: 'Optimistic Display', 'Inter', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    cursor: pointer;
+}
+
+.qc-btn:hover {
+    transform: scale(1.05);
+}
+
+.qc-btn-primary {
+    background-color: #0088ff;
+    color: white;
+}
+
+.qc-btn-secondary {
+    background-color: rgba(35, 35, 42, 0.12);
+    color: #0088ff;
+    border: 1px solid rgba(0, 136, 255, 0.2);
+}
+
+/* Tablet / Medium Screens */
+@media (max-width: 1024px) {
+    .modal-overlay.quick-connect-mode .modal-card {
+        width: 90vw;
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: block; 
+    }
+
+    .qc-container {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 32px 32px;
+        height: auto;
+        min-height: 100%;
+    }
+
+    .qc-content-wrapper {
+        flex-direction: column-reverse; /* Image on top */
+        gap: 32px;
+        height: auto;
+    }
+
+    .qc-left-col {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .qc-right-col {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .qc-setup-img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover; /* Use cover to ensure edges are filled */
+        border-radius: 36px; /* Scaled radius for tablet */
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    .modal-overlay.quick-connect-mode .modal-card {
+        width: 95vw;
+        max-height: 95vh;
+        border-radius: 24px;
+    }
+
+    .qc-container {
+        padding: 60px 20px 24px;
+    }
+    
+    .qc-content-wrapper {
+        gap: 32px;
+    }
+
+    .qc-right-col {
+        display: none;
+    }
+
+    .qc-title {
+        font-size: 20px;
+    }
+    
+    .qc-subtitle {
+        font-size: 15px;
+    }
+    
+    .qc-description, .qc-text {
+        font-size: 15px;
+    }
+
+    .qc-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .qc-btn {
+        width: 100%;
+    }
+    
+    .qc-toolbar {
+        padding: 16px;
+        top: 0;
+        right: 0;
+    }
+}
