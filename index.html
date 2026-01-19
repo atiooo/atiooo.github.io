@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yutong Zhang</title>
+    <title>Yutong Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_modal.css">
 </head>
 <body>
     <div class="portfolio-container">
         <!-- Background -->
         <div class="background-layer">
-            <img src="images/BG.png" alt="Background" class="bg-img">
+            <img src="images/bg.png" alt="Background" class="bg-img">
         </div>
 
         <main class="content-grid">
@@ -43,8 +44,8 @@
                 <h2 class="section-title">Projects</h2>
                 
                 <div class="project-list">
-                    <!-- Project 1 -->
-                    <article class="project-card">
+                    <!-- Project 1 (Quick Connect) -->
+                    <article class="project-card" onclick="openModal('quick-connect')" style="cursor: pointer;">
                         <div class="card-glass-bg"></div>
                         <div class="card-content">
                             <div class="card-header">
@@ -59,13 +60,13 @@
                             
                             <div class="card-body">
                                 <p class="project-desc">Enabled one-gesture communication across AI wearables</p>
-                                <a href="https://www.engadget.com/wearables/metas-smart-glasses-have-a-new-shortcut-to-call-and-text-without-saying-hey-meta-213303178.html" class="view-link" target="_blank" rel="noopener noreferrer">View feature review ↗</a>
+                                <span class="view-link">View details ↗</span>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project 2 -->
-                    <article class="project-card">
+                    <!-- Project 2 (WhatsApp) -->
+                    <article class="project-card" onclick="openModal('whatsapp')" style="cursor: pointer;">
                         <div class="card-glass-bg"></div>
                         <div class="card-content">
                             <div class="card-header">
@@ -80,7 +81,7 @@
                             
                             <div class="card-body">
                                 <p class="project-desc">Reduced setup friction and improved reliability for WhatsApp on Ray Ban Meta Display</p>
-                                <p class="view-link note">Coming soon · confidential</p>
+                                <span class="view-link note">View details ↗</span>
                             </div>
                         </div>
                     </article>
@@ -106,8 +107,8 @@
                         </div>
                     </article>
                     
-                    <!-- Project 4 -->
-                     <article class="project-card">
+                    <!-- Project 4 (Public Sharing) -->
+                     <article class="project-card" onclick="openModal('public-sharing')" style="cursor: pointer;">
                         <div class="card-glass-bg"></div>
                         <div class="card-content">
                             <div class="card-header">
@@ -122,7 +123,7 @@
                             
                             <div class="card-body">
                                 <p class="project-desc">Reimagined public sharing flows on AI glasses</p>
-                                <a href="https://www.figma.com/slides/NrNsVMvys6M61RxrnT6HHf/Sample-Case-Study---Yutong?node-id=5005-6944&t=ee8fqa1rgosclDQA-1" class="view-link" target="_blank" rel="noopener noreferrer">View sample case study ↗</a>
+                                <span class="view-link">View details ↗</span>
                             </div>
                         </div>
                     </article>
@@ -148,5 +149,141 @@
             </div>
         </div>
     </div>
+
+    <!-- Reusable Modal Structure -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-card">
+            <div class="modal-toolbar">
+                <button class="modal-close-btn" id="close-modal">
+                    <img src="images/X.png" alt="Close">
+                </button>
+            </div>
+            
+            <div class="modal-content" id="modal-content-area">
+                <!-- Content will be injected dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('project-modal');
+        const contentArea = document.getElementById('modal-content-area');
+        const closeBtn = document.getElementById('close-modal');
+
+        // Project Data
+        const projects = {
+            'quick-connect': {
+                icon: 'images/icon-meta-1.png',
+                title: 'Quick Connect',
+                subtitle: 'Lead designer · 2025',
+                description: 'Led the end-to-end design of Quick Connect, a one-gesture shortcut on AI smart glasses that lets users reach a chosen contact for calling or messaging, and share recent captures contextually without pulling out a phone.',
+                impact: 'Improved average task success rate for communication & sharing while ensuring core comms reliability through clear guardrails, internal dogfooding, and usability testing & research.',
+                keywords: 'System design · Cross-device UX · Discovery & onboarding · Reliability & error recovery · Metrics/guardrails · UX research (usability testing & internal dogfooding)',
+                buttons: [
+                    { text: 'View feature review', link: 'https://www.engadget.com/wearables/metas-smart-glasses-have-a-new-shortcut-to-call-and-text-without-saying-hey-meta-213303178.html', primary: true },
+                    { text: 'Setup instruction', link: 'https://www.meta.com/help/ai-glasses/1296226131989237/?srsltid=AfmBOorFljn6JGObO9QeBc3J7qWLds1pFYgoM0V-ohXdsBR6p6pV_FZP', primary: false }
+                ]
+            },
+            'whatsapp': {
+                icon: 'images/icon-meta-2.png',
+                title: 'WhatsApp Account Linking',
+                subtitle: 'Lead designer · 2025',
+                description: 'Owned the redesign of Account Linking for Meta Ray Ban Display, focusing on making provider connections faster and more dependable across phone and glasses. The solution combined scan reliability improvements (right-sized scan frame, live preview, clearer guidance) and an education layer that helps users understand capabilities and where to manage settings after linking.',
+                impact: 'Reduced friction and failure during setup by addressing system-level constraints (hardware/UX mapping, auth dependencies, limited environment sensing) with clear success metrics, pragmatic tradeoffs, and XFN alignment—resulting in faster time-to-link, higher scan success, and improved linking completion and user confidence.',
+                keywords: 'System design · Cross-device UX · Discovery & onboarding · Reliability & error recovery · Metrics/guardrails · UX research (usability testing & internal dogfooding)',
+                buttons: [
+                    { text: 'Confidential - coming soon', link: null, primary: false }
+                ]
+            },
+            'public-sharing': {
+                icon: 'images/icon-meta-3.png',
+                title: 'Public Sharing on Glasses',
+                subtitle: 'Lead designer · 2024',
+                description: 'Led the end-to-end system design for “Sharing to Instagram Stories” across smart glasses, watch, and phone—reframing low public sharing into a confidence-and-control problem by introducing an optional path to preview/edit in the Instagram Story Editor while keeping direct sharing fast.',
+                impact: 'Increased users’ confidence to share publicly without sacrificing in-the-moment capture by defining clear device roles (glasses for capture, watch for quick confirmation, phone for control/editing), and de-risking rollout through internal dogfooding and UXR-informed refinements.',
+                keywords: 'Ecosystem & system design · Wearables UX · Voice-first interaction · Confidence & control loops · Usability testing & dogfooding · Scoped MVP strategy',
+                buttons: [
+                    { text: 'View sample case study', link: 'https://www.figma.com/slides/NrNsVMvys6M61RxrnT6HHf/Sample-Case-Study---Yutong?node-id=5005-6944&t=ee8fqa1rgosclDQA-1', primary: true }
+                ]
+            }
+        };
+
+        function renderModal(projectId) {
+            const data = projects[projectId];
+            if (!data) return;
+
+            const buttonsHtml = data.buttons.map(btn => {
+                if (btn.link) {
+                    return `<a href="${btn.link}" class="modal-btn ${btn.primary ? 'btn-primary' : 'btn-secondary'}" target="_blank" rel="noopener noreferrer">${btn.text}</a>`;
+                } else {
+                    return `<span class="modal-btn btn-secondary" style="cursor: default; opacity: 0.6;">${btn.text}</span>`;
+                }
+            }).join('');
+
+            contentArea.innerHTML = `
+                <div class="modal-header">
+                    <div class="modal-title-row">
+                        <div class="modal-icon">
+                            <img src="${data.icon}" alt="Icon" class="${projectId === 'whatsapp' ? 'full-cover' : ''}">
+                        </div>
+                        <div class="modal-title-text">
+                            <h2>${data.title}</h2>
+                            <p class="modal-subtitle">${data.subtitle}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-details">
+                    <p class="modal-description">${data.description}</p>
+                    
+                    <div class="modal-section">
+                        <p class="detail-label">Impact</p>
+                        <p class="detail-text">${data.impact}</p>
+                    </div>
+
+                    <div class="modal-section">
+                        <p class="detail-label">Keywords</p>
+                        <p class="detail-text">${data.keywords}</p>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    ${buttonsHtml}
+                </div>
+            `;
+        }
+
+        // Open function
+        window.openModal = function(projectId) {
+            renderModal(projectId);
+            modal.style.display = 'flex';
+            // Force reflow
+            void modal.offsetWidth;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close functions
+        function closeModal() {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                if (!modal.classList.contains('active')) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                    contentArea.innerHTML = ''; // Clear content
+                }
+            }, 600);
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        });
+    </script>
 </body>
 </html>
